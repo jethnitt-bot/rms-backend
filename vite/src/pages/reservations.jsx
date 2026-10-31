@@ -46,7 +46,7 @@ import {
   CloseOutlined
 } from '@ant-design/icons';
 
-const API_BASE_URL = 'http://localhost/rms_backend/api';
+const API_BASE_URL = 'https://rms-backend-jeth.infy.click/rms_backend/api';
 
 const getStatusColor = (status) => {
   switch (status) {

@@ -77,7 +77,7 @@ const TablesPage = () => {
   const fetchTables = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost/rms_backend/api/tables/get_tables.php');
+      const res = await fetch('https://rms-backend-jeth.infy.click/rms_backend/api/tables/get_tables.php');
       const data = await res.json();
       if (Array.isArray(data)) {
         setTables(data);
@@ -120,8 +120,8 @@ const TablesPage = () => {
 
     try {
       const url = editingId
-        ? 'http://localhost/rms_backend/api/tables/update_table.php'
-        : 'http://localhost/rms_backend/api/tables/create_table.php';
+        ? 'https://rms-backend-jeth.infy.click/rms_backend/api/tables/update_table.php'
+        : 'https://rms-backend-jeth.infy.click/rms_backend/api/tables/create_table.php';
 
       const payload = editingId ? { id: editingId, ...formData } : formData;
 

@@ -60,3 +60,4 @@ export default function MonthlyBarChart({ data = [], labels = ['Mo', 'Tu', 'We',
     />
   );
 }
+

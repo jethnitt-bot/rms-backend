@@ -21,7 +21,7 @@ import 'jspdf-autotable';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, ArcElement, Title, Tooltip, Legend);
 
-const API_GET_REPORTS = 'http://localhost/rms_backend/api/reports/get_reports.php';
+const API_GET_REPORTS = 'https://rms-backend-jeth.infy.click/rms_backend/api/reports/get_reports.php';
 
 export default function ReportsPage() {
   const [activeTab, setActiveTab] = useState(0);

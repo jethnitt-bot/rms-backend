@@ -12,9 +12,9 @@ import {
 } from '@ant-design/icons';
 
 // កំណត់ API URLs (កែប្រែ path ឱ្យត្រូវតាម Folder backend របស់អ្នក)
-const API_GET_SUPPLIERS = 'http://localhost/rms_backend/api/suppliers/get_suppliers.php';
-const API_SAVE_SUPPLIER = 'http://localhost/rms_backend/api/suppliers/save_supplier.php';
-const API_DELETE_SUPPLIER = 'http://localhost/rms_backend/api/suppliers/delete_supplier.php';
+const API_GET_SUPPLIERS = 'https://rms-backend-jeth.infy.click/rms_backend/api/suppliers/get_suppliers.php';
+const API_SAVE_SUPPLIER = 'https://rms-backend-jeth.infy.click/rms_backend/api/suppliers/save_supplier.php';
+const API_DELETE_SUPPLIER = 'https://rms-backend-jeth.infy.click/rms_backend/api/suppliers/delete_supplier.php';
 
 export default function SupplierManagement() {
   const [suppliers, setSuppliers] = useState([]);

@@ -62,3 +62,4 @@ export default function SimpleBarScroll({ children, sx, ...other }) {
 }
 
 SimpleBarScroll.propTypes = { children: PropTypes.any, sx: PropTypes.any, other: PropTypes.any };
+

@@ -90,3 +90,4 @@ MainCard.propTypes = {
   ref: PropTypes.object,
   others: PropTypes.any
 };
+

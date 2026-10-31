@@ -20,3 +20,4 @@ export default function LogoSection({ reverse, isIcon, sx, to }) {
 }
 
 LogoSection.propTypes = { reverse: PropTypes.bool, isIcon: PropTypes.bool, sx: PropTypes.any, to: PropTypes.any };
+

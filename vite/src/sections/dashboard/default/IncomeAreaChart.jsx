@@ -135,3 +135,4 @@ export default function IncomeAreaChart({ view }) {
 Legend.propTypes = { items: PropTypes.array, onToggle: PropTypes.func };
 
 IncomeAreaChart.propTypes = { view: PropTypes.oneOf(['monthly', 'weekly']) };
+

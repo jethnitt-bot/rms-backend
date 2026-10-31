@@ -116,3 +116,4 @@ Avatar.propTypes = {
   size: PropTypes.string,
   others: PropTypes.any
 };
+

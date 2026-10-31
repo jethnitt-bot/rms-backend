@@ -236,3 +236,4 @@ OrderTableHead.propTypes = { order: PropTypes.any, orderBy: PropTypes.string };
 OrderStatus.propTypes = { status: PropTypes.number };
 
 OrderTable.propTypes = { rows: PropTypes.array };
+

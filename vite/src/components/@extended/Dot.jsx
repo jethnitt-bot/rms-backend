@@ -27,3 +27,4 @@ export default function Dot({ color, size, variant, sx, ...rest }) {
 }
 
 Dot.propTypes = { color: PropTypes.any, size: PropTypes.number, variant: PropTypes.string, sx: PropTypes.any, rest: PropTypes.any };
+

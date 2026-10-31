@@ -44,9 +44,9 @@ import {
 // នាំចូលរូបភាព QR Code ថេរពីថត src/assets/images/qr.jpg
 import qrImage from '../assets/images/users/qr.jpg';
 
-const API_GET_ORDERS = 'http://localhost/rms_backend/api/billing/get_billing_orders.php';
-const API_PROCESS_PAYMENT = 'http://localhost/rms_backend/api/billing/process_payment.php';
-const API_CLEAR_ORDER = 'http://localhost/rms_backend/api/billing/cancel_order.php';
+const API_GET_ORDERS = 'https://rms-backend-jeth.infy.click/rms_backend/api/billing/get_billing_orders.php';
+const API_PROCESS_PAYMENT = 'https://rms-backend-jeth.infy.click/rms_backend/api/billing/process_payment.php';
+const API_CLEAR_ORDER = 'https://rms-backend-jeth.infy.click/rms_backend/api/billing/cancel_order.php';
 
 export default function Billing() {
   const [loading, setLoading] = useState(false);

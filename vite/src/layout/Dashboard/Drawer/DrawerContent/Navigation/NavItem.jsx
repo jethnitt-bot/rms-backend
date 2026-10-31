@@ -177,3 +177,4 @@ NavItem.propTypes = {
   isParents: PropTypes.bool,
   setSelectedID: PropTypes.oneOfType([PropTypes.any, PropTypes.func])
 };
+

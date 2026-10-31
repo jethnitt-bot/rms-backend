@@ -48,3 +48,4 @@ export default function AuthWrapper({ children }) {
 }
 
 AuthWrapper.propTypes = { children: PropTypes.node };
+

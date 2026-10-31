@@ -51,8 +51,8 @@ const Categories = () => {
   const [imagePreview, setImagePreview] = useState(null);
 
   // Base Server URL & API URL
-  const SERVER_URL = 'http://localhost/rms_backend/';
-  const API_URL = 'http://localhost/rms_backend/api/categories/categories.php';
+  const SERVER_URL = 'https://rms-backend-jeth.infy.click/rms_backend/';
+  const API_URL = 'https://rms-backend-jeth.infy.click/rms_backend/api/categories/categories.php';
 
   const cardShadow = '0 2px 10px rgba(0,0,0,0.04)';
 

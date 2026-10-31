@@ -33,15 +33,15 @@ export default function OrdersPage() {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const resOrders = await fetch('http://localhost/rms_backend/api/orders/get_orders.php');
+      const resOrders = await fetch('https://rms-backend-jeth.infy.click/rms_backend/api/orders/get_orders.php');
       const dataOrders = await resOrders.json();
       if (Array.isArray(dataOrders)) setOrders(dataOrders);
 
-      const resCat = await fetch('http://localhost/rms_backend/api/orders/get_categories.php');
+      const resCat = await fetch('https://rms-backend-jeth.infy.click/rms_backend/api/orders/get_categories.php');
       const dataCat = await resCat.json();
       if (Array.isArray(dataCat)) setCategories(dataCat);
 
-      const resMenu = await fetch('http://localhost/rms_backend/api/orders/get_menu_items.php');
+      const resMenu = await fetch('https://rms-backend-jeth.infy.click/rms_backend/api/orders/get_menu_items.php');
       const dataMenu = await resMenu.json();
       if (Array.isArray(dataMenu)) setMenuItems(dataMenu);
 
@@ -60,7 +60,7 @@ export default function OrdersPage() {
   const handleDeleteOrder = async (orderId) => {
     if (window.confirm(`តើអ្នកពិតជាចង់លុប Order ID: ORD-${orderId} នេះមែនទេ?`)) {
       try {
-        const res = await fetch(`http://localhost/rms_backend/api/orders/delete_order.php?id=${orderId}`, {
+        const res = await fetch(`https://rms-backend-jeth.infy.click/rms_backend/api/orders/delete_order.php?id=${orderId}`, {
           method: 'DELETE',
         });
         const result = await res.json();
@@ -190,7 +190,7 @@ export default function OrdersPage() {
     };
 
     try {
-      const res = await fetch('http://localhost/rms_backend/api/orders/create_order.php', {
+      const res = await fetch('https://rms-backend-jeth.infy.click/rms_backend/api/orders/create_order.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
