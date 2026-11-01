@@ -207,11 +207,12 @@ const UserManagement = () => {
   };
 
   const getRoleColor = (role) => {
-    switch (role) {
-      case 'Administrator': return { bg: '#f3e5f5', color: '#7b1fa2' };
-      case 'Manager': return { bg: '#e3f2fd', color: '#1976d2' };
-      case 'Cashier': return { bg: '#fff3e0', color: '#e65100' };
-      case 'Waiter': return { bg: '#e0f2f1', color: '#00695c' };
+const formattedRole = role ? role.toLowerCase() : '';
+    switch (formattedRole) {
+      case 'administrator': return { bg: '#f3e5f5', color: '#7b1fa2' };
+      case 'manager': return { bg: '#e3f2fd', color: '#1976d2' };
+      case 'cashier': return { bg: '#fff3e0', color: '#e65100' };
+      case 'waiter': return { bg: '#e0f2f1', color: '#00695c' };
       default: return { bg: '#fce4ec', color: '#c2185b' };
     }
   };

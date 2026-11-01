@@ -80,10 +80,9 @@ const MenuPage = () => {
   const [imagePreview, setImagePreview] = useState('');
 
   // ---------------- API Endpoint Config ----------------
-  const SERVER_URL = 'https://rms-backend-jeth.infy.click/rms_backend/';
-  const MENU_API = 'https://rms-backend-jeth.infy.click/rms_backend/api/menu/menu_items.php';
-  const CATEGORIES_API = 'https://rms-backend-jeth.infy.click/rms_backend/api/categories/categories.php';
-
+const SERVER_URL = 'http://localhost/rms_backend/';
+const MENU_API = 'http://localhost/rms_backend/api/menu/menu_items.php';
+const CATEGORIES_API = 'http://localhost/rms_backend/api/categories/categories.php';
   const cardShadow = '0 2px 10px rgba(0,0,0,0.04)';
 
   // ---------------- Fetch ពី Backend ----------------

@@ -21,7 +21,8 @@ import 'jspdf-autotable';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, ArcElement, Title, Tooltip, Legend);
 
-const API_GET_REPORTS = 'https://rms-backend-jeth.infy.click/rms_backend/api/reports/get_reports.php';
+// 🟢 កែប្រែ URL មកកាន់ Localhost
+const API_GET_REPORTS = 'http://localhost/rms_backend/api/reports/get_reports.php';
 
 export default function ReportsPage() {
   const [activeTab, setActiveTab] = useState(0);
@@ -484,7 +485,7 @@ export default function ReportsPage() {
             </Grid>
           </Grid>
 
-          {/* Right Grid - ផ្នែកខាងស្តាំដែលបានកែសម្រួល */}
+          {/* Right Grid */}
           <Grid item xs={12} lg={4}>
             <Grid container spacing={3}>
               {/* Sales by Payment Method */}

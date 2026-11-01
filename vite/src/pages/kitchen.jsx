@@ -31,8 +31,7 @@ import {
   ReloadOutlined
 } from '@ant-design/icons';
 
-const API_BASE_URL = 'https://rms-backend-jeth.infy.click/rms_backend/api/kitchen';
-
+const API_BASE_URL = 'http://localhost/rms_backend/api/kitchen';
 export default function Kitchen() {
   const [tickets, setTickets] = useState([]);
   const [readyList, setReadyList] = useState([]);

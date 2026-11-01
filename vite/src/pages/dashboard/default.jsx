@@ -38,7 +38,7 @@ import InboxOutlined from '@ant-design/icons/InboxOutlined';
 import AppstoreOutlined from '@ant-design/icons/AppstoreOutlined';
 
 // ==============================|| API CONFIG ||============================== //
-const API_BASE = 'https://rms-backend-jeth.infy.click/rms_backend/api/dashboard';
+const API_BASE = 'http://localhost/rms_backend/api/dashboard';
 
 const WEEKDAY_LABELS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 function dayLabel(dateStr) {

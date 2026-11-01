@@ -46,7 +46,8 @@ import {
   CloseOutlined
 } from '@ant-design/icons';
 
-const API_BASE_URL = 'https://rms-backend-jeth.infy.click/rms_backend/api';
+// 🟢 កែប្រែ URL មកកាន់ Localhost
+const API_BASE_URL = 'http://localhost/rms_backend/api';
 
 const getStatusColor = (status) => {
   switch (status) {
@@ -185,7 +186,7 @@ const ReservationsPage = () => {
         resetForm();
         setShowForm(false);
       } else {
-        alert(result.message || 'មានបញ្ហាក្នុងការរក្សាទុក!');
+        alert(result.message || 'មានបញ្ហាក្នុងการរក្សាទុក!');
       }
     } catch (err) {
       console.error('Save error:', err);
@@ -293,7 +294,7 @@ const ReservationsPage = () => {
         ))}
       </Grid>
 
-      {/* Main Area: កាត់បន្ថយទំហំ Table មកត្រឹម md={7} (ឬ md={6} ពេលបើក Form) និង Form មកត្រឹម md={5} (ឬ md={6}) ដើម្បីកុំឱ្យធ្លាក់ */}
+      {/* Main Area */}
       <Grid container spacing={2}>
         {/* LEFT: RESERVATION TABLE */}
         <Grid item xs={12} md={showForm || showInvoice ? 6 : 12}>
@@ -459,7 +460,6 @@ const ReservationsPage = () => {
 
               <Box component="form" onSubmit={handleSaveReservation}>
                 <Stack spacing={1}>
-                  {/* Select Table */}
                   <Box>
                     <Typography variant="caption" fontWeight="600" color="text.secondary" sx={{ mb: 0.2, display: 'block' }}>
                       Select Table <span style={{ color: 'red' }}>*</span>
@@ -486,7 +486,6 @@ const ReservationsPage = () => {
                     </FormControl>
                   </Box>
 
-                  {/* Customer Name */}
                   <Box>
                     <Typography variant="caption" fontWeight="600" color="text.secondary" sx={{ mb: 0.2, display: 'block' }}>Customer Name</Typography>
                     <TextField
@@ -499,7 +498,6 @@ const ReservationsPage = () => {
                     />
                   </Box>
 
-                  {/* Phone Number */}
                   <Box>
                     <Typography variant="caption" fontWeight="600" color="text.secondary" sx={{ mb: 0.2, display: 'block' }}>Phone Number</Typography>
                     <TextField
@@ -512,7 +510,6 @@ const ReservationsPage = () => {
                     />
                   </Box>
 
-                  {/* Date */}
                   <Box>
                     <Typography variant="caption" fontWeight="600" color="text.secondary" sx={{ mb: 0.2, display: 'block' }}>
                       Date <span style={{ color: 'red' }}>*</span>
@@ -527,7 +524,6 @@ const ReservationsPage = () => {
                     />
                   </Box>
 
-                  {/* Time */}
                   <Box>
                     <Typography variant="caption" fontWeight="600" color="text.secondary" sx={{ mb: 0.2, display: 'block' }}>
                       Time <span style={{ color: 'red' }}>*</span>
@@ -542,7 +538,6 @@ const ReservationsPage = () => {
                     />
                   </Box>
 
-                  {/* Guests */}
                   <Box>
                     <Typography variant="caption" fontWeight="600" color="text.secondary" sx={{ mb: 0.2, display: 'block' }}>Guests (Pax)</Typography>
                     <TextField
@@ -556,7 +551,6 @@ const ReservationsPage = () => {
                     />
                   </Box>
 
-                  {/* Status */}
                   <Box>
                     <Typography variant="caption" fontWeight="600" color="text.secondary" sx={{ mb: 0.1, display: 'block' }}>
                       Status <span style={{ color: 'red' }}>*</span>
@@ -567,7 +561,6 @@ const ReservationsPage = () => {
                     </RadioGroup>
                   </Box>
 
-                  {/* Special Requests */}
                   <Box>
                     <Typography variant="caption" fontWeight="600" color="text.secondary" sx={{ mb: 0.2, display: 'block' }}>Special Requests</Typography>
                     <TextField
@@ -582,7 +575,6 @@ const ReservationsPage = () => {
                     />
                   </Box>
 
-                  {/* Buttons */}
                   <Stack direction="row" spacing={1} sx={{ pt: 1 }}>
                     <Button
                       variant="outlined"

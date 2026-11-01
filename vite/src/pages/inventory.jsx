@@ -40,11 +40,11 @@ import {
   InboxOutlined as EmptyIcon
 } from '@ant-design/icons';
 
-const API_GET_INVENTORY = 'https://rms-backend-jeth.infy.click/rms_backend/api/inventory/get_inventory.php';
-const API_UPDATE_STATUS = 'https://rms-backend-jeth.infy.click/rms_backend/api/inventory/update_status.php';
-const API_ADD_REQUEST = 'https://rms-backend-jeth.infy.click/rms_backend/api/inventory/add_request.php';
-const API_DELETE_REQUEST = 'https://rms-backend-jeth.infy.click/rms_backend/api/inventory/delete_request.php';
-const API_GET_SUPPLIERS = 'https://rms-backend-jeth.infy.click/rms_backend/api/suppliers/get_suppliers.php';
+const API_GET_INVENTORY = 'http://localhost/rms_backend/api/inventory/get_inventory.php';
+const API_UPDATE_STATUS = 'http://localhost/rms_backend/api/inventory/update_status.php';
+const API_ADD_REQUEST = 'http://localhost/rms_backend/api/inventory/add_request.php';
+const API_DELETE_REQUEST = 'http://localhost/rms_backend/api/inventory/delete_request.php';
+const API_GET_SUPPLIERS = 'http://localhost/rms_backend/api/suppliers/get_suppliers.php';
 
 export default function InventoryManagement() {
   const [loading, setLoading] = useState(false);

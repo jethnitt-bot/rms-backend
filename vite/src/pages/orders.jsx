@@ -29,19 +29,19 @@ export default function OrdersPage() {
   // State សម្រាប់បញ្ជីមុខម្ហូបដែលបានជ្រើសក្នុង Order
   const [selectedItems, setSelectedItems] = useState([]);
 
-  // 🟢 ១. ទាញយក Categories, Menu Items និង Orders ពី Backend API
+  // 🟢 ១. ទាញយក Categories, Menu Items និង Orders ពី Backend API (Localhost)
   const fetchData = async () => {
     setLoading(true);
     try {
-      const resOrders = await fetch('https://rms-backend-jeth.infy.click/rms_backend/api/orders/get_orders.php');
+      const resOrders = await fetch('http://localhost/rms_backend/api/orders/get_orders.php');
       const dataOrders = await resOrders.json();
       if (Array.isArray(dataOrders)) setOrders(dataOrders);
 
-      const resCat = await fetch('https://rms-backend-jeth.infy.click/rms_backend/api/orders/get_categories.php');
+      const resCat = await fetch('http://localhost/rms_backend/api/orders/get_categories.php');
       const dataCat = await resCat.json();
       if (Array.isArray(dataCat)) setCategories(dataCat);
 
-      const resMenu = await fetch('https://rms-backend-jeth.infy.click/rms_backend/api/orders/get_menu_items.php');
+      const resMenu = await fetch('http://localhost/rms_backend/api/orders/get_menu_items.php');
       const dataMenu = await resMenu.json();
       if (Array.isArray(dataMenu)) setMenuItems(dataMenu);
 
@@ -56,11 +56,11 @@ export default function OrdersPage() {
     fetchData();
   }, []);
 
-  // 🟢 ២. Function សម្រាប់លុប Order
+  // 🟢 ២. Function សម្រាប់លុប Order (Localhost)
   const handleDeleteOrder = async (orderId) => {
     if (window.confirm(`តើអ្នកពិតជាចង់លុប Order ID: ORD-${orderId} នេះមែនទេ?`)) {
       try {
-        const res = await fetch(`https://rms-backend-jeth.infy.click/rms_backend/api/orders/delete_order.php?id=${orderId}`, {
+        const res = await fetch(`http://localhost/rms_backend/api/orders/delete_order.php?id=${orderId}`, {
           method: 'DELETE',
         });
         const result = await res.json();
@@ -73,7 +73,7 @@ export default function OrdersPage() {
         }
       } catch (error) {
         console.error('Error deleting order:', error);
-        alert('មានបញ្ហាក្នុងការភ្ជាប់ទៅកាន់ Server!');
+        alert('មានបញ្ហាក្នុងการភ្ជាប់ទៅកាន់ Server!');
       }
     }
   };
@@ -170,7 +170,7 @@ export default function OrdersPage() {
     return selectedItems.reduce((sum, item) => sum + (item.price * item.qty), 0);
   };
 
-  // បញ្ជូន Order ទៅ API
+  // បញ្ជូន Order ទៅ API (Localhost)
   const handleCreateOrder = async () => {
     const validItems = selectedItems.filter(i => i.menu_item_id !== '');
     if (validItems.length === 0) {
@@ -190,7 +190,7 @@ export default function OrdersPage() {
     };
 
     try {
-      const res = await fetch('https://rms-backend-jeth.infy.click/rms_backend/api/orders/create_order.php', {
+      const res = await fetch('http://localhost/rms_backend/api/orders/create_order.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -273,7 +273,7 @@ export default function OrdersPage() {
         </Button>
       </Box>
 
-      {/* 🟢 Summary Cards Section (ប្តូរដាក់ Border ព័ទ្ធជុំវិញកាត) */}
+      {/* 🟢 Summary Cards Section */}
       <Grid container spacing={3} sx={{ mb: 4 }}>
         {[
           { title: "Total Orders", count: totalOrdersCount, icon: <ShoppingCartOutlined />, color: '#1677ff', bg: '#e6f4ff', border: '#93c5fd' },
@@ -421,7 +421,6 @@ export default function OrdersPage() {
                           <EyeOutlined />
                         </IconButton>
                         
-                        {/* 🟢 ប៊ូតុងលុប Order */}
                         <IconButton 
                           size="small" 
                           color="error" 
