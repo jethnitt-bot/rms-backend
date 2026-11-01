@@ -1,16 +1,15 @@
 <?php
 // ==============================================================
-// Database connection (PDO)
-// កែ $username / $password ខាងក្រោម បើ MySQL របស់អ្នកមាន password
-// (WAMP default: username = root, password = ទទេ)
+// Database connection (PDO) - TiDB Cloud
 // ==============================================================
 
 class Database
 {
-    private $host = 'localhost';
+    private $host = 'gateway01.ap-northeast-1.prod.aws.tidbcloud.com';
+    private $port = '4000';
     private $db_name = 'rms_db';
-    private $username = 'root';
-    private $password = '';
+    private $username = 'T4zopEKeeRkvh3n.root';
+    private $password = '71aXhe3InIIIktFj';
     public $conn;
 
     public function getConnection()
@@ -19,7 +18,7 @@ class Database
 
         try {
             $this->conn = new PDO(
-                "mysql:host={$this->host};dbname={$this->db_name};charset=utf8mb4",
+                "mysql:host={$this->host};port={$this->port};dbname={$this->db_name};charset=utf8mb4",
                 $this->username,
                 $this->password
             );
@@ -35,3 +34,4 @@ class Database
         return $this->conn;
     }
 }
+?>
